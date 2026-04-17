@@ -6,14 +6,11 @@
 
 | Nome Completo | RA |
 |---|---|
-| Integrante 1 | RA-001 |
-| Integrante 2 | RA-002 |
-| Integrante 3 | RA-003 |
-| Integrante 4 | RA-004 |
+| Victor de Souza Maciel | RGM-45450811 |
+| Nathan de Oliveira Gomes | RGM-39997243 |
+| Thiago Henrique dos Santos Freitas | RGM-40564100 |
+| Willian Carvalho de Oliveira | RGM-34168133 |
 
-> ⚠️ **Substituir os nomes e RAs pelos dados reais do grupo**
-
----
 
 ## 🎯 Objetivo do Sistema
 
