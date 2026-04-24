@@ -1,27 +1,16 @@
-public class Cliente {
+public class Cliente extends Pessoa {
 
-    private int id;
-    private String nome;
     private String telefone;
     private String endereco;
 
-    // Construtor completo
+    // Construtor completo — chama super para id e nome
     public Cliente(int id, String nome, String telefone, String endereco) {
-        this.id = id;
-        setNome(nome);
+        super(id, nome);
         setTelefone(telefone);
         setEndereco(endereco);
     }
 
     // Getters
-    public int getId() {
-        return id;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
     public String getTelefone() {
         return telefone;
     }
@@ -31,13 +20,6 @@ public class Cliente {
     }
 
     // Setters com validação
-    public void setNome(String nome) {
-        if (nome == null || nome.trim().isEmpty()) {
-            throw new IllegalArgumentException("Nome do cliente não pode ser vazio.");
-        }
-        this.nome = nome.trim();
-    }
-
     public void setTelefone(String telefone) {
         if (telefone == null || telefone.trim().isEmpty()) {
             throw new IllegalArgumentException("Telefone do cliente não pode ser vazio.");
@@ -50,6 +32,14 @@ public class Cliente {
             throw new IllegalArgumentException("Endereço do cliente não pode ser vazio.");
         }
         this.endereco = endereco.trim();
+    }
+
+    // Sobrescrita de exibirInfo com comportamento específico
+    @Override
+    public void exibirInfo() {
+        super.exibirInfo("Cliente:");
+        System.out.println("  Telefone: " + telefone);
+        System.out.println("  Endereço: " + endereco);
     }
 
     @Override

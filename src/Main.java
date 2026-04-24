@@ -20,8 +20,28 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("============================================");
-        System.out.println("   🍕 BEM-VINDO AO DELIVERYFÁCIL v1.0 🍕  ");
+        System.out.println("   🍕 BEM-VINDO AO DELIVERYFÁCIL v2.0 🍕  ");
         System.out.println("============================================");
+
+        // ─────────────────────────────────────────────
+        // DEMONSTRAÇÃO DE POLIMORFISMO (CP2)
+        // ─────────────────────────────────────────────
+        System.out.println("\n===== DEMONSTRAÇÃO DE POLIMORFISMO =====");
+
+        // ArrayList polimórfico: armazena diferentes subclasses de Pessoa
+        ArrayList<Pessoa> pessoas = new ArrayList<>();
+        pessoas.add(new Cliente(1, "Maria Silva", "11999990000", "Rua das Flores, 10"));
+        pessoas.add(new Entregador(2, "João Moto", "Moto", true));
+        pessoas.add(new Administrador(3, "Carlos Admin", "Gerente"));
+
+        // Polimorfismo: cada objeto chama sua versão de exibirInfo()
+        for (Pessoa p : pessoas) {
+            p.exibirInfo();
+            System.out.println("---");
+        }
+
+        System.out.println("========================================\n");
+        // ─────────────────────────────────────────────
 
         int opcao = -1;
         while (opcao != 0) {
@@ -270,7 +290,6 @@ public class Main {
 
         Pedido pedido = new Pedido(contadorPedido++, cliente);
 
-        // Loop para adicionar itens
         String continuar = "s";
         while (continuar.equalsIgnoreCase("s")) {
             listarProdutos();
@@ -292,7 +311,6 @@ public class Main {
             continuar = scanner.nextLine();
         }
 
-        // Regra de negócio: só salva se tiver itens
         if (!pedido.isPedidoValido()) {
             System.out.println("❌ Pedido inválido (sem itens). Pedido cancelado.");
             contadorPedido--;
