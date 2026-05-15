@@ -12,7 +12,6 @@ import java.sql.SQLException;
 public class ConexaoBD {
 
     // ───── Configurações de conexão ─────
-    // Altere estes valores conforme o seu ambiente PostgreSQL
     private static final String URL      = "jdbc:postgresql://localhost:5432/delivery_db";
     private static final String USUARIO  = "postgres";
     private static final String SENHA    = "postgres";
