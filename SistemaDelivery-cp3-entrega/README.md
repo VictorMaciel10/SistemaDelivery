@@ -1,5 +1,14 @@
 # DeliveryFácil — CP3
 
+## Integrantes do Grupo
+
+| Nome | RGM |
+|------|-----|
+| Victor de Souza Maciel | 45450811 |
+| Thiago Henrique dos Santos Freitas | 40564100 |
+| Willian Carvalho de Oliveira | 34168133 |
+| Nathan Gomes dos Santos | 39997243 |
+
 ## Estrutura de Pacotes
 
 ```
